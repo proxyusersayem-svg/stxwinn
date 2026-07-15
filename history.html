@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN - Luxury Ledger</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wallet.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header glass-effect">
+        <a href="index.html" class="logo gold-gradient-text">STX WIN</a>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="glass-card">
+            <h2 class="gold-gradient-text">Transaction and Game Ledgers</h2>
+            <div class="ledger-tabs">
+                <button class="ledger-tab active" data-type="transactions">Capital Flows</button>
+                <button class="ledger-tab" data-type="bets">Game Predictions</button>
+            </div>
+            <div class="history-table-container">
+                <table class="results-table">
+                    <thead id="history-header">
+                        <!-- Head content swapped via dynamic render -->
+                    </thead>
+                    <tbody id="history-body">
+                        <!-- Dynamic lines -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/history.js"></script>
+</body>
+</html>
