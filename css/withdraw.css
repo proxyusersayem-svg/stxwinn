@@ -1,0 +1,62 @@
+/* Premium Casino Withdrawal System Styles */
+.withdraw-wrapper {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.withdraw-limits-badge {
+    background: rgba(226, 176, 71, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.withdraw-limits-badge strong {
+    color: var(--gold-primary);
+}
+
+.gateway-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.gateway-option {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.gateway-option img {
+    height: 20px;
+}
+
+.gateway-option:hover, .gateway-option.active {
+    border-color: var(--gold-primary);
+    background: rgba(226, 176, 71, 0.08);
+}
+
+.gateway-option i {
+    font-size: 20px;
+    color: var(--gold-primary);
+}
+
+.gateway-label {
+    font-size: 12px;
+    font-weight: 600;
+}
