@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN - Initiate VIP Membership</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container glass-card">
+        <div class="auth-header">
+            <h1 class="gold-gradient-text">STX WIN</h1>
+            <p>Create your premium credentials</p>
+        </div>
+        <form id="signup-form" class="auth-form">
+            <div class="form-group">
+                <label for="reg-username"><i class="fas fa-user-plus"></i> Preferred Username</label>
+                <input type="text" id="reg-username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="reg-email" placeholder="example@stxwin.com" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password"><i class="fas fa-key"></i> Passcode</label>
+                <input type="password" id="reg-password" placeholder="Min. 8 characters" required>
+            </div>
+            <div class="form-group flex-row">
+                <input type="checkbox" id="terms" required>
+                <label for="terms" class="small-text text-light">I verify that I am 18+ and accept legal parameters</label>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full">Register Membership</button>
+        </form>
+        <div class="auth-footer">
+            <p>Already a registered member? <a href="login.html" class="gold-link">Login Here</a></p>
+        </div>
+    </div>
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
