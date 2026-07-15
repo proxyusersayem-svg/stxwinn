@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN | Premium Casino & Colour Trading</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Premium Loader -->
+    <div id="loader" class="loader-container">
+        <div class="luxury-spinner"></div>
+        <h2 class="gold-gradient-text">STX WIN</h2>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header glass-effect">
+        <div class="logo-container">
+            <a href="index.html" class="logo gold-gradient-text">STX WIN</a>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search games, events...">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="dashboard.html"><i class="fas fa-gamepad"></i> Lobby</a>
+            <a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+        <div class="auth-buttons" id="nav-auth">
+            <a href="login.html" class="btn btn-outline-gold">Login</a>
+            <a href="signup.html" class="btn btn-gold">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="content-wrapper">
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="hero-glow"></div>
+            <div class="hero-text">
+                <span class="badge gold-badge"><i class="fas fa-crown"></i> VIP CLUB OPEN</span>
+                <h1 class="gold-gradient-text">Elevate Your Play, <br>Double Your Wins</h1>
+                <p>Experience Asia's premium, decentralized online casino with transparent mechanics and instant cashouts.</p>
+                <div class="cta-buttons">
+                    <a href="dashboard.html" class="btn btn-gold btn-large">Play Now</a>
+                    <a href="signup.html" class="btn btn-outline-gold btn-large">Claim Bonus</a>
+                </div>
+            </div>
+            <div class="hero-stats glass-card">
+                <div class="stat-item">
+                    <span class="stat-num counter" id="jackpot-counter">$1,482,903.00</span>
+                    <span class="stat-label">MEGA JACKPOT</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">99.2%</span>
+                    <span class="stat-label">AVERAGE RTP</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Promotions Slider -->
+        <section class="promotions-section">
+            <div class="section-title">
+                <h2>Exclusive Promotions</h2>
+                <span class="gold-line"></span>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-card glass-card">
+                    <div class="promo-badge">100% Match</div>
+                    <h3>Welcome Bonus Package</h3>
+                    <p>Get up to $500 free bonus cash + 50 free spins on your first deposit.</p>
+                </div>
+                <div class="promo-card glass-card">
+                    <div class="promo-badge">Daily Reward</div>
+                    <h3>Daily Check-in Bonus</h3>
+                    <p>Claim up to $10 daily just by signing in and playing games.</p>
+                    <button class="btn btn-gold btn-sm" id="claim-daily-btn">Claim now</button>
+                </div>
+                <div class="promo-card glass-card">
+                    <div class="promo-badge">Referral</div>
+                    <h3>Earn 5% Commission</h3>
+                    <p>Invite friends and earn a percentage of all their active wagers forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Games -->
+        <section class="games-section">
+            <div class="section-title">
+                <h2>Popular Casino Games</h2>
+                <span class="gold-line"></span>
+            </div>
+            <div class="games-grid">
+                <a href="dashboard.html?game=wingo" class="game-card glass-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=400" alt="Wingo">
+                    <div class="game-info">
+                        <h3>Wingo Colour</h3>
+                        <span class="badge-live">LIVE</span>
+                    </div>
+                </a>
+                <a href="dashboard.html?game=aviator" class="game-card glass-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Aviator">
+                    <div class="game-info">
+                        <h3>Aviator</h3>
+                        <span class="badge-hot">HOT</span>
+                    </div>
+                </a>
+                <a href="dashboard.html?game=slots" class="game-card glass-card">
+                    <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=400" alt="Slots">
+                    <div class="game-info">
+                        <h3>Premium Slots</h3>
+                        <span class="badge-hot font-gold">98.5% RTP</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Live Winners Marquee -->
+        <section class="live-winners-section glass-card">
+            <h3><span class="live-dot"></span> Live Winners</h3>
+            <div class="winners-marquee">
+                <div class="marquee-content" id="winners-marquee">
+                    <!-- Javascript generates winners dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav glass-effect">
+        <a href="index.html" class="active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="dashboard.html"><i class="fas fa-gamepad"></i><span>Lobby</span></a>
+        <a href="wallet.html"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2 class="gold-gradient-text">STX WIN</h2>
+                <p>Luxury platform for live gaming, colour trading, and VIP rewards.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <a href="dashboard.html">Game Lobby</a>
+                <a href="support.html">Live Support</a>
+                <a href="settings.html">Theme Settings</a>
+            </div>
+            <div class="footer-legal">
+                <h4>Compliance</h4>
+                <p>18+ Play Responsibly. License secured by global standards.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 STX WIN. All premium rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
