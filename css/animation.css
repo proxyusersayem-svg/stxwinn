@@ -1,0 +1,18 @@
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(226, 176, 71, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(226, 176, 71, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(226, 176, 71, 0.2); }
+}
+
+.luxury-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(226, 176, 71, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--gold-primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
