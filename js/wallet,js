@@ -1,0 +1,26 @@
+function updateWalletUI() {
+    const bal = StorageManager.getBalance();
+    const disp = document.getElementById('wallet-balance-display');
+    if (disp) disp.innerText = bal.toFixed(2);
+    
+    // Populate simple brief history lists inside wallet page
+    const trans = StorageManager.getItem(CONFIG.KEY_TRANSACTIONS) || [];
+    const briefList = document.getElementById('brief-transaction-history');
+    if (briefList) {
+        briefList.innerHTML = trans.slice(-5).reverse().map(t => `
+            <div class="glass-card flex-between mt-2">
+                <div>
+                    <h4>${t.type} via ${t.method}</h4>
+                    <small class="text-muted">${t.dateTime}</small>
+                </div>
+                <strong class="${t.type === 'DEPOSIT' ? 'text-success' : 'text-danger'}">
+                    ${t.type === 'DEPOSIT' ? '+' : '-'}${Utils.formatCurrency(t.amount)}
+                </strong>
+            </div>
+        `).join('') || '<p class="text-muted">No capital transfers on record.</p>';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateWalletUI();
+});
