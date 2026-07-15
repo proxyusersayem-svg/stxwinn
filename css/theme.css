@@ -1,0 +1,15 @@
+:root {
+    --bg-dark-base: #050811;
+    --bg-dark-card: rgba(13, 19, 38, 0.65);
+    --bg-dark-header: rgba(5, 8, 17, 0.85);
+    --gold-primary: #e2b047;
+    --gold-gradient: linear-gradient(135deg, #f5c453 0%, #a87c1e 100%);
+    --text-light: #f1f5f9;
+    --text-muted: #94a3b8;
+    --system-green: #10b981;
+    --system-red: #ef4444;
+    --system-violet: #8b5cf6;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --glass-border: rgba(226, 176, 71, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
