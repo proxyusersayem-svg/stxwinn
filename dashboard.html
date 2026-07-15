@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN | Play WingGo Colour Trading</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/wingo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header glass-effect">
+        <a href="index.html" class="logo gold-gradient-text">STX WIN</a>
+        <div class="balance-display glass-card">
+            <i class="fas fa-wallet gold-icon"></i>
+            <span id="header-balance">$0.00</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="dashboard.html" class="active"><i class="fas fa-gamepad"></i> Lobby</a>
+            <a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-card">
+            <div class="sidebar-user">
+                <i class="fas fa-user-circle user-avatar"></i>
+                <div class="user-meta">
+                    <h4 id="user-display-name">Player_001</h4>
+                    <span class="vip-badge">VIP Level 1</span>
+                </div>
+            </div>
+            <nav class="sidebar-links">
+                <a href="dashboard.html" class="active"><i class="fas fa-chart-line"></i> Colour Game</a>
+                <a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a>
+                <a href="history.html"><i class="fas fa-history"></i> Game History</a>
+                <a href="profile.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="support.html"><i class="fas fa-headset"></i> Live Support</a>
+            </nav>
+        </aside>
+
+        <!-- Wingo Game Board -->
+        <section class="game-container glass-card">
+            <div class="wingo-tabs">
+                <button class="time-tab active" data-period="30">30S</button>
+                <button class="time-tab" data-period="60">1M</button>
+                <button class="time-tab" data-period="180">3M</button>
+                <button class="time-tab" data-period="300">5M</button>
+            </div>
+
+            <div class="wingo-info-bar">
+                <div class="period-id">
+                    <span>Period ID</span>
+                    <h3 id="current-period-id">202611150001</h3>
+                </div>
+                <div class="countdown-timer">
+                    <span>Time Left</span>
+                    <h3 id="wingo-timer">00:30</h3>
+                </div>
+            </div>
+
+            <!-- Betting Action Grid -->
+            <div class="betting-board">
+                <div class="color-selections">
+                    <button class="btn-color green" onclick="openBettingModal('Green')">Green</button>
+                    <button class="btn-color violet" onclick="openBettingModal('Violet')">Violet</button>
+                    <button class="btn-color red" onclick="openBettingModal('Red')">Red</button>
+                </div>
+
+                <div class="numbers-grid">
+                    <button class="num-btn purple" onclick="openBettingModal('0')">0</button>
+                    <button class="num-btn green" onclick="openBettingModal('1')">1</button>
+                    <button class="num-btn red" onclick="openBettingModal('2')">2</button>
+                    <button class="num-btn green" onclick="openBettingModal('3')">3</button>
+                    <button class="num-btn red" onclick="openBettingModal('4')">4</button>
+                    <button class="num-btn green" onclick="openBettingModal('5')">5</button>
+                    <button class="num-btn red" onclick="openBettingModal('6')">6</button>
+                    <button class="num-btn green" onclick="openBettingModal('7')">7</button>
+                    <button class="num-btn red" onclick="openBettingModal('8')">8</button>
+                    <button class="num-btn red-purple" onclick="openBettingModal('9')">9</button>
+                </div>
+
+                <div class="size-selections">
+                    <button class="size-btn big" onclick="openBettingModal('Big')">Big</button>
+                    <button class="size-btn small" onclick="openBettingModal('Small')">Small</button>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="results-history glass-card">
+                <h3>Previous Results</h3>
+                <div class="results-table-container">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Period ID</th>
+                                <th>Number</th>
+                                <th>Size</th>
+                                <th>Color</th>
+                            </tr>
+                        </thead>
+                        <tbody id="wingo-results-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Unified Betting Modal -->
+    <div class="modal glass-effect" id="betting-modal">
+        <div class="modal-content glass-card">
+            <h3 id="modal-target-title">Bet on Green</h3>
+            <div class="form-group">
+                <label>Select Amount</label>
+                <div class="amount-quick-select">
+                    <button class="amt-btn" data-amt="10">$10</button>
+                    <button class="amt-btn" data-amt="50">$50</button>
+                    <button class="amt-btn" data-amt="100">$100</button>
+                    <button class="amt-btn" data-amt="500">$500</button>
+                </div>
+                <input type="number" id="bet-input" value="10" min="1" class="form-control">
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline-gold" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-gold" id="confirm-bet-btn">Confirm Bet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav glass-effect">
+        <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="dashboard.html" class="active"><i class="fas fa-gamepad"></i><span>Lobby</span></a>
+        <a href="wallet.html"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a>
+    </nav>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/result.js"></script>
+    <script src="js/wingo.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
