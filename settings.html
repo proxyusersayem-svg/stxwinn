@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN - Settings Center</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header glass-effect">
+        <a href="index.html" class="logo gold-gradient-text">STX WIN</a>
+    </header>
+
+    <main class="content-wrapper small-wrapper">
+        <section class="glass-card">
+            <h2>Personal Preferences</h2>
+            <div class="settings-list">
+                <div class="settings-item flex-between">
+                    <div>
+                        <h4>Premium Live Audio</h4>
+                        <p class="small-text">Audio triggers during game resolution events</p>
+                    </div>
+                    <input type="checkbox" id="settings-sound" checked>
+                </div>
+                <div class="settings-item flex-between">
+                    <div>
+                        <h4>Dynamic Visual FX</h4>
+                        <p class="small-text">Light emission triggers on win loops</p>
+                    </div>
+                    <input type="checkbox" id="settings-fx" checked>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>
