@@ -1,0 +1,44 @@
+<main class="content-wrapper deposit-wrapper">
+    <section class="glass-card form-section">
+        <div class="bkash-header-badge">
+            <i class="fas fa-wallet"></i>
+            <span>bKash Secure Merchant gateway</span>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">
+                <span class="step-num">1</span>
+                <p>Send Money to our Admin Personal bKash Account.</p>
+            </div>
+            <div class="number-copier">
+                <span class="bkash-number" id="bkash-target-num">01860909272</span>
+                <button type="button" class="btn-copy" id="copy-bkash-num">Copy</button>
+            </div>
+            <div class="instruction-step">
+                <span class="step-num">2</span>
+                <p>Input your sender phone number, deposit amount, and matching TrxID below for verification.</p>
+            </div>
+        </div>
+
+        <form id="deposit-form" class="transaction-form">
+            <div class="form-group">
+                <label>Deposit Amount (BDT)</label>
+                <div class="input-with-suffix">
+                    <input type="number" id="deposit-amount-bdt" min="500" value="1200" class="form-control" required>
+                    <span class="input-suffix">BDT</span>
+                </div>
+                <small class="conversion-info">≈ <strong id="usd-equivalent">10.00</strong> USD credited to your wallet (1 USD = 120 BDT)</small>
+            </div>
+            <div class="form-group">
+                <label>Your bKash Number</label>
+                <input type="text" id="sender-number" placeholder="e.g. 018XXXXXXXX" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Transaction ID (TrxID)</label>
+                <input type="text" id="transaction-id" placeholder="e.g. AMK10JD8E9" class="form-control" required style="text-transform: uppercase;">
+            </div>
+            <button type="submit" class="btn btn-gold btn-full">Verify & Credit Balance</button>
+        </form>
+    </section>
+</main>
+<link rel="stylesheet" href="css/deposit.css">
