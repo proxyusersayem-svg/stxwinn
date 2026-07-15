@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STX WIN - VIP Profile</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header glass-effect">
+        <a href="index.html" class="logo gold-gradient-text">STX WIN</a>
+    </header>
+
+    <main class="content-wrapper small-wrapper">
+        <section class="glass-card profile-card">
+            <div class="profile-header text-center">
+                <i class="fas fa-crown gold-icon huge-icon"></i>
+                <h2 id="profile-username" class="gold-gradient-text">Premium Member</h2>
+                <span class="badge gold-badge">VIP Level 5</span>
+            </div>
+            <hr class="gold-line">
+            <form id="profile-form">
+                <div class="form-group">
+                    <label>Email ID</label>
+                    <input type="email" id="profile-email" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Update Password</label>
+                    <input type="password" id="profile-new-pass" placeholder="Enter fresh security key" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-gold btn-full">Save Profile Securely</button>
+            </form>
+            <button id="logout-btn" class="btn btn-outline-gold btn-full mt-3">Exit Premium Lounge</button>
+        </section>
+    </main>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
